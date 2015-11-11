@@ -1,0 +1,51 @@
+*{
+}
+
+/* kommentkommentkommentkommentkommentkommentkommentkomment */
+
+body{
+  margin: 0;
+}
+
+article{
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+img{
+  height: auto;
+  width: 100%;
+}
+a{
+  color: #444;
+}
+a:hover{
+  color: #999;
+}
+
+h1{
+  color: #444;
+  font-weight: 900;
+  font-size: 36px;
+
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+h1, h2{
+  font-family: Lato, sans-serif;
+  text-align: center;
+}
+h2{
+  color: #999;
+  font-weight: 300;
+  font-size: 32px;
+
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+p{
+  color: #444;
+  font-family: Merriweather, sans-serif;
+  line-height: 1.5;
+}
