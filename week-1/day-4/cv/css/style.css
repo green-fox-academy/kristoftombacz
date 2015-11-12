@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  background-image: url("../img/background2.jpg");
+  background-repeat: no-repeat;
+  height: 595px;
+
+  padding-top: 50px;
+}
+section {
+  background-color: grey;
+}
+div {
+
+}
+
+h1 {
+  color: white;
+
+  font-size: 50px;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+h1:hover {
+  color:#d3d3d3;
+}
