@@ -6,7 +6,7 @@
 }
 header {
   background-image: url("../img/background2.jpg");
-  background-size: cover;
+  background-size:cover;
   background-attachment: fixed;
   position: relative;
 
@@ -21,6 +21,9 @@ body {
 li {
   list-style-type: none;
   margin: 10px auto;
+}
+span {
+  margin: 0 15px;
 }
 
 
@@ -43,6 +46,9 @@ h2 {
   margin: 20px auto;
 }
 
+.adatok {
+  text-align: center;
+}
 .container {
   max-width: 70%;
   margin: 0 auto;
