@@ -4,35 +4,41 @@
 
   font-family: Lato, sans-serif;
 }
-
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+}
+blockquote {
+  background-image: url(../img/grey-wall.png);
+  text-align: center;
+  height: 100px;
+  width: 500px;
+  margin: 500px auto auto auto;
+  font-size: 30px;
+}
+blockquote p {
+  padding: 30px 0;
+}
 body {
   background-image: url("../img/background2.jpg");
   background-size:cover;
   background-attachment: fixed;
-  position: relative;
 
   height: 800px;
   width: auto;
 
+  position: relative;
   padding-top: 50px;
 }
-blockquote {
-  background-color: #7f8c8d;
-  text-align: center;
 
-  height: 50px;
-  width: 300px;
-  margin: auto;
-}
 li {
-  list-style-type: none;
+  list-style-type:none;
   margin-bottom: 20px;
+  margin-left: 180px;
 }
-span {
-  margin-right: 80px;
-}
-
-
 h1 {
   color: white;
 
@@ -50,7 +56,18 @@ h1, h2, h3 {
 }
 h2 {
   border-bottom: solid 1px black;
-  margin: 70px auto 20px auto;
+  margin: 60px auto 20px auto;
+}
+span {
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.elolab {
+  margin-top: 200px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  text-align: center;
 }
 
 .kep {
@@ -59,11 +76,17 @@ h2 {
   margin-right: 10px;
 }
 .about {
-  margin: 20px auto;
+  margin: 30px auto;
+}
+
+.icon {
+  float: left;
+  margin-left: 30px;
+  position: relative;
 }
 .container {
   max-width: 70%;
-  margin: 50px auto 50px auto;
+  margin: 50px auto;
   padding: 0 20px;
   overflow: hidden;
   background-color: #FFF;
@@ -72,6 +95,25 @@ h2 {
   margin-top: 550px;
 }
 .aboutme {
-  margin-bottom: 20px;
+  margin-left: 180px;
+  margin-top: 30px;
   text-align: justify;
+}
+.personal {
+  margin-left: 180px;
+}
+.personal2 {
+  margin-left: 180px;
+  margin-top: 30px;
+}
+.references {
+  float:left;
+  position: relative;
+}
+.references2 {
+  float:right;
+  position: relative;
+}
+.references, .references2 {
+  margin-top: 80px;
 }
