@@ -4,7 +4,8 @@
 
   font-family: Lato, sans-serif;
 }
-header {
+
+body {
   background-image: url("../img/background2.jpg");
   background-size:cover;
   background-attachment: fixed;
@@ -15,15 +16,20 @@ header {
 
   padding-top: 50px;
 }
-body {
-  background-color: grey;
+blockquote {
+  background-color: #7f8c8d;
+  text-align: center;
+
+  height: 50px;
+  width: 300px;
+  margin: auto;
 }
 li {
   list-style-type: none;
-  margin: 10px auto;
+  margin-bottom: 20px;
 }
 span {
-  margin: 0 15px;
+  margin-right: 80px;
 }
 
 
@@ -43,21 +49,29 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 h2 {
-  margin: 20px auto;
+  border-bottom: solid 1px black;
+  margin: 70px auto 20px auto;
 }
 
-.adatok {
-  text-align: center;
+.kep {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+}
+.about {
+  margin: 20px auto;
 }
 .container {
   max-width: 70%;
-  margin: 0 auto;
-  padding: 30px;
+  margin: 50px auto 50px auto;
+  padding: 0 20px;
+  overflow: hidden;
   background-color: #FFF;
 }
 .masikha {
-  margin-top: 600px;
+  margin-top: 550px;
 }
-.about {
+.aboutme {
   margin-bottom: 20px;
+  text-align: justify;
 }
