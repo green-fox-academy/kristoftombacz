@@ -11,17 +11,6 @@ a {
 a:hover {
   color: red;
 }
-blockquote {
-  background-image: url(../img/grey-wall.png);
-  text-align: center;
-  height: 100px;
-  width: 500px;
-  margin: 500px auto auto auto;
-  font-size: 30px;
-}
-blockquote p {
-  padding: 30px 0;
-}
 body {
   background-image: url("../img/background2.jpg");
   background-size:cover;
@@ -59,30 +48,18 @@ h2 {
   margin: 60px auto 20px auto;
 }
 span {
-  margin-right: 30px;
+  margin-right: 20px;
   margin-top: 30px;
 }
 
-.elolab {
-  margin-top: 200px;
-  margin-bottom: 30px;
-  font-size: 12px;
-  text-align: center;
-}
 
-.kep {
-  width: 12px;
-  height: 12px;
-  margin-right: 10px;
-}
 .about {
   margin: 30px auto;
 }
-
-.icon {
-  float: left;
-  margin-left: 30px;
-  position: relative;
+.aboutme {
+  margin-left: 180px;
+  margin-top: 30px;
+  text-align: justify;
 }
 .container {
   max-width: 70%;
@@ -91,13 +68,24 @@ span {
   overflow: hidden;
   background-color: #FFF;
 }
+.elolab {
+  margin-top: 150px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  text-align: center;
+}
+.kep {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+.icon {
+  float: left;
+  margin-left: 25px;
+  position: relative;
+}
 .masikha {
   margin-top: 550px;
-}
-.aboutme {
-  margin-left: 180px;
-  margin-top: 30px;
-  text-align: justify;
 }
 .personal {
   margin-left: 180px;
