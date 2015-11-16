@@ -68,13 +68,13 @@ span {
   overflow: hidden;
   background-color: #FFF;
 }
-.elolab {
+.ending {
   margin-top: 150px;
   margin-bottom: 30px;
   font-size: 12px;
   text-align: center;
 }
-.kep {
+.socialimg {
   width: 12px;
   height: 12px;
   margin-right: 5px;
@@ -84,7 +84,7 @@ span {
   margin-left: 25px;
   position: relative;
 }
-.masikha {
+.headerh1 {
   margin-top: 550px;
 }
 .personal {
@@ -93,15 +93,4 @@ span {
 .personal2 {
   margin-left: 180px;
   margin-top: 30px;
-}
-.references {
-  float:left;
-  position: relative;
-}
-.references2 {
-  float:right;
-  position: relative;
-}
-.references, .references2 {
-  margin-top: 80px;
 }
