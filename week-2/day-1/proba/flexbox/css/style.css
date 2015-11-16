@@ -1,0 +1,25 @@
+.container {
+  width: 500px;
+  height: 600px;
+  background-color: grey;
+  padding: 30px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.box {
+  background-color: yellow;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 10px solid red;
+  order: 1;
+}
+.first {
+  order: 42;
+  flex-grow: 6;
+}

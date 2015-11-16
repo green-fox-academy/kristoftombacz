@@ -1,0 +1,19 @@
+.container {
+  width: 500px;
+  height: 600px;
+  background-color: grey;
+  padding: 30px;
+  box-sizing: border-box;
+
+}
+.box {
+  background-color: yellow;
+  font-size: 50px;
+  font-weight: bold;
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: red 10px solid;
+  margin: 10px;
+  float: left;
+}

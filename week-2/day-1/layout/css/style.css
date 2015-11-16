@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  min-height: 100vh;
+}
+main {
+  background-color: #FFF;
+  padding: 20px;
+}
+main h1, main h2 {
+  border-bottom: solid 1px #aaa;
+  font-weight: lighter;
+}
+
+.biography {
+  background-color: #F9F9F9;
+  border: grey solid 1px;
+  width: 270px;
+  float:right;
+  margin: auto;
+  padding: 25px;
+  box-sizing: border-box;
+
+}
+.main-header {
+  background-color: red;
+  height: 80px;
+  position: relative;
+}
+.main-header ul {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+
+}
+.main-header li {
+  list-style-type: none;
+}
+.main-footer {
+  background-color: grey;
+  height: 150px;
+}
+.main-container {
+  background-color: blue;
+  order: 2;
+  width: 100%
+}
+.main-sidebar {
+  background-color: yellow;
+  order: 1;
+  min-width: 176px;
+}
+.source {
+  font-size: 23px;
+}
+.warning {
+  margin-left: 10px;
+}
+.user-menu {
+  top: 0;
+  right: 0;
+}
+.talk-menu {
+  bottom: 0;
+  left: 0;
+}
+.edit-menu {
+  bottom: 0;
+  right: 300px;
+}
+.search-menu {
+  right: 0;
+  bottom: 0;
+  width: 300px;
+}
+.search-menu, .edit-menu, .talk-menu, .user-menu {
+  position: absolute;
+}
