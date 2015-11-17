@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>próbaform</title>
+
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Form próba</h1>
+    <form action="">
+      <p>
+        <label for="valami">Írj ide valamit (kell beleírni valamit*)</label>
+        <input required type="text" placeholder="ide kell írni" class="ez">
+      </p>
+
+      <p>
+        <label>jelszójelszó</label>
+        <input type="password">
+      </p>
+
+      <p>
+        <label>emailemail</label>
+        <input type="email">
+      </p>
+      <p>
+        <label for="szam">szamok</label>
+        <input type="number" name="name" id="csik">
+      </p>
+
+      <p>
+        <label for="internet">URLURL</label>
+        <input type="url" id="internet">
+      </p>
+
+      <p>
+        <label for="csik">RANGEGEGERANGE</label>
+        <input type="range" name="name" id="csik">
+      </p>
+
+      <p>
+        progress:
+        <progress value="30" max="100">30%</progress>
+      </p>
+
+      <p>
+        <label for="datepicker">IDŐIDŐIDŐ</label>
+        <input type="date" id="datepicker">
+      </p>
+
+      <p>
+        <label for="kereso">kereső</label>
+        <input type="search" id="kereso">
+      </p>
+
+      <p>
+        <label for="legordulo">szelektálás</label>
+        <select id="legordulo">
+          <option disabled selected>válassz egyet</option>
+          <option>majom</option>
+          <option>kasca</option>
+          <option>répa</option>
+          <option>leming</option>
+        </select>
+      </p>
+
+      <p>
+        <input type="submit" value="OK">
+        <button type="submit">GOMBOGMB</button>
+      </p>
+
+      <p>
+        <label for="szin">SZÍN</label>
+        <input type="color" name="name" value="szin">
+      </p>
+    </form>
+    <form action="">
+      <p>
+        <label for="ize">Ide meg mást</label>
+        <input type="checkbox" id="ize">
+      </p>
+      <p>
+        <label for="er">rádiógomb
+        <ul>
+            <li>
+              <label>
+                <input type="radio" name="ugyanaz">
+                radió gomb LÉBÖL
+              </label>
+            </li>
+
+            <li>
+              <label>
+                <input type="radio" name="ugyanaz">
+                radió gomb LÉBÖL
+              </label>
+            </li>
+
+            <li>
+              <label>
+                <input type="radio" name="ugyanaz">
+                radió gomb LÉBÖL
+              </label>
+            </li>
+        </ul>
+      </p>
+      <p>
+        <label for="textteruket">Textterület</label>
+        <textarea id="textteruket" placeholder="Írj!" ></textarea>
+      </p>
+    </form>
+  </body>
+</html>

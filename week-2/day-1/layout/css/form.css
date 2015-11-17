@@ -1,0 +1,70 @@
+body {
+  font-family: sans-serif;
+}
+a {
+
+  text-decoration: none;
+}
+li {
+   margin: auto 15px;
+}
+input {
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  width: 100%;
+  border-radius: 2px;
+  padding: 5px;
+}
+main {
+  font-size: 14px;
+}
+p {
+  margin: 0;
+}
+span {
+  position: absolute;
+  right: 0;
+}
+form {
+
+}
+.maininput:focus {
+  border: 3px solid rgb(77, 144, 254);
+  box-sizing: border-box;
+}
+
+.maininput {
+  margin-bottom: 16px;
+  margin-top: 5px;
+  font-style: italic;
+  height: 30px;
+}
+.forms {
+  width: 290px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  position: relative;
+}
+.button {
+  background-color: #00af89;
+  border: 1px solid #00af89;
+  border-radius: 4px;
+  color: white;
+  width: 290px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 7px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.button:hover {
+  background-color: #008c6d;
+}
+.simg {
+  background-image: url(../img/search.png);
+  background-repeat: no-repeat;
+  right: 22px;
+  bottom: 12px;
+  width: 12px;
+  height: 13px;
+}
