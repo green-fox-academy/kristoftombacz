@@ -4,10 +4,19 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: #f6f6f6;
-  background-image: linear-gradient(#ffffff 5%,#f6f6f6 80px);
+  background-image: linear-gradient(#ffffff 2%,#f6f6f6 80px);
 
-  font: 16px arial, sans-serif;
+  font-size: 14px;
+  font-family: arial , sans-serif;
 }
+footer ul {
+  padding: 0;
+  display: flex;
+}
+footer li {
+  padding: 5px 5px 5px 0;
+}
+
 main {
   background-color: #FFF;
   border: 1px solid #a7d7f9;
@@ -18,10 +27,10 @@ aside ul {
   margin: 0 0 0 15px;
   list-style-type: none;
   font-size: 12px;
-  padding: 3px;
+  padding: 0 3px;
 }
 aside li {
-  padding: 3px 0;
+  padding-top: 6px;
 }
 input {
   box-sizing: border-box;
@@ -43,8 +52,7 @@ main h1, main h2 {
 h1 {
   font-size: 28.8px;
 }
-h3 {
-  border-top: 1px solid #ccc;
+h4 {
   margin: 0;
   color: #4d4d4d;
   font-weight: normal;
@@ -53,12 +61,61 @@ h3 {
 
 .biography {
   background-color: #F9F9F9;
-  border: grey solid 1px;
-  width: 270px;
+  border: 1px solid #aaa;
   float:right;
-  margin: auto 15px;
-  padding: 25px;
+  margin: auto;
   box-sizing: border-box;
+  padding: 10px;
+  margin: 8px;
+  max-width: 270px;
+}
+.biography p {
+  font-size: 12px;
+  margin: 0;
+}
+.margaret-profile {
+  margin-left: 15px;
+}
+.bio-title {
+  margin: 5px 0 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+.bio-center {
+  text-align: center;
+}
+.bio-column {
+  font-weight: bold;
+  min-width: 72px;
+}
+.bio-row {
+  font-size: 12px;
+  display: flex;
+  padding: 5px;
+}
+.content-box {
+  border: 1px solid #aaa;
+  background-color: #f9f9f9;
+  max-width: 130px;
+}
+.content-box ul {
+  padding-left: 5px;
+}
+.content-box li {
+  padding: 3px;
+  list-style-type: none;
+}
+.content-box a span {
+  margin-right: 10px;
+}
+.content-box h3 {
+  text-align: center;
+}
+.main-container {
+  font: 14px arial, sans-serif;
+  order: 2;
+  width: 100%
 }
 .main-header {
   height: 80px;
@@ -68,59 +125,69 @@ h3 {
   padding: 0;
   margin: 0;
   display: flex;
+  text-align: left;
 }
-.main-header li {
+.main-header li, footer ul {
   list-style-type: none;
 }
 .main-footer {
+  font-size: 11px;
   height: 150px;
-}
-.main-container {
-  order: 2;
-  width: 100%
+  padding: 12px;
 }
 .main-sidebar {
   order: 1;
   min-width: 176px;
+  line-height: 15px;
+}
+.edit-menu {
+  font-size: 13px;
+  bottom: 0;
+  right: 325px;
+}
+.footer-links {
+  float: left;
 }
 .logo {
   display: block;
   width: 135px;
   height: 155px;
   background: url(../img/enwiki.png);
-  margin: 6px auto 0;
+  margin: 6px auto 25px 0;
   color: rgba(0,0,0,0);
 }
 .fejimg {
   padding-left: 6px;
 }
+.footer-img {
+  float: right;
+  text-align: right;
+}
 .notlogged {
   color: grey;
+}
+.references-column {
+  -webkit-column-count: 2;
+}
+.references-column li{
+  margin-left: 20px;
 }
 .source {
   font-size: 12.88px;
 }
-.warning {
+.sidebar-one {
   margin-left: 10px;
 }
-.user-menu {
-  font-size: 12px;
-  padding: 10px;
-  top: 0;
-  right: 0;
+.sidebar-one img {
+  padding: 5px 0;
 }
-.user-menu li {
-  margin: auto 5px;
-}
-.talk-menu {
-  font-size: 13px;
-  bottom: 0;
-  left: 0;
-}
-.edit-menu {
-  font-size: 13px;
-  bottom: 0;
-  right: 325px;
+.simg {
+  background: url(../img/search.png) no-repeat;
+
+  right: 22px;
+  bottom: 12px;
+  width: 12px;
+  height: 13px;
 }
 .search-menu {
   padding: 5px 20px 5px 5px;
@@ -166,13 +233,22 @@ h3 {
 
   padding: 7px;
 }
-.simg {
-  background: url(../img/search.png) no-repeat;
-
-  right: 22px;
-  bottom: 12px;
-  width: 12px;
-  height: 13px;
+.talk-menu {
+  font-size: 13px;
+  bottom: 0;
+  left: 0;
+}
+.user-menu {
+  font-size: 12px;
+  padding: 10px;
+  top: 0;
+  right: 0;
+}
+.user-menu li {
+  margin: auto 5px;
+}
+.warning {
+  margin-left: 10px;
 }
 
 input[type="search"] {
