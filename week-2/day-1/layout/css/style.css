@@ -9,6 +9,9 @@ body {
   font-size: 14px;
   font-family: arial , sans-serif;
 }
+blockquote {
+  margin: 0 40px;
+}
 footer ul {
   padding: 0;
   display: flex;
@@ -22,6 +25,7 @@ main {
   border: 1px solid #a7d7f9;
   border-right: 0;
   padding: 20px;
+  line-height: 22px;
 }
 aside ul {
   margin: 0 0 0 15px;
@@ -51,6 +55,7 @@ main h1, main h2 {
 }
 h1 {
   font-size: 28.8px;
+  padding-bottom: 5px;
 }
 h4 {
   margin: 0;
@@ -68,6 +73,7 @@ h4 {
   padding: 10px;
   margin: 8px;
   max-width: 270px;
+  line-height: normal;
 }
 .biography p {
   font-size: 12px;
@@ -98,11 +104,13 @@ h4 {
   border: 1px solid #aaa;
   background-color: #f9f9f9;
   max-width: 130px;
+  line-height: normal;
 }
 .content-box ul {
   padding-left: 5px;
 }
 .content-box li {
+  font-size: 13px;
   padding: 3px;
   list-style-type: none;
 }
@@ -110,7 +118,9 @@ h4 {
   margin-right: 10px;
 }
 .content-box h3 {
+  margin: 5px 0;
   text-align: center;
+  font-size: 13px;
 }
 .main-container {
   font: 14px arial, sans-serif;
