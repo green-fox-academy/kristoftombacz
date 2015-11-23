@@ -4,6 +4,7 @@ szam = int(temp)
 var1 = 0
 var2 = 1
 swap = 0
+print(swap)
 
 while szam > var2:
     print(var2)

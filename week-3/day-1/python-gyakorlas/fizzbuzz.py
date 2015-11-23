@@ -1,7 +1,7 @@
-ize = input ('adj meg egy szamot: ')
-szam = int(ize)
+temp = input ('adj meg egy szamot: ')
+number = int(ize)
 
-lt = [1] * szam
+lt = [1] * number
 su = 1
 i = 0
 
@@ -12,7 +12,6 @@ while i < len(lt):
     i += 1
 
 i = 0
-segedgeci = 0
 while i < len(lt):
     if ((lt[i] % 3) == 0) and ((lt[i] % 5) == 0):
         lt[i] = "fizzbuzz"
