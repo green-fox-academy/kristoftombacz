@@ -2,7 +2,7 @@ tmp = input ('irj be egy szamot tojas! ')
 ins=int(tmp)
 ize = ""
 if (ins > 3999):
-    print ("tul nagy a szam, max 3999")
+    print("tul nagy a szam, max 3999")
 if (ins // 1000) == 3:
     ize = ize + "MMM"
     ins = ins - 3000
@@ -43,10 +43,10 @@ if (ins // 10) == 9:
     ize = ize + "XC"
     ins = ins - 90
 elif (ins // 10) == 8:
-    ize = ize + "XXC"
+    ize = ize + "LXXX"
     ins = ins - 80
 elif (ins // 10) == 7:
-    ize = ize + "XXXC"
+    ize = ize + "LXX"
     ins = ins - 70
 elif (ins // 10) == 6:
     ize = ize + "LX"
@@ -93,4 +93,4 @@ elif (ins // 1) == 2:
 elif (ins // 10) == 1:
     ize = ize + "I"
     ins = ins - 1
-print (ize)
+print(ize)
