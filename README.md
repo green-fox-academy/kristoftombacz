@@ -1,1 +1,1 @@
-# the daily suffering of Kristóf Tombácz
+# the daily works of Kristóf Tombácz
