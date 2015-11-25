@@ -1,5 +1,5 @@
 temp = input ('adj meg egy szamot: ')
-number = int(ize)
+number = int(temp)
 
 lt = [1] * number
 su = 1
@@ -12,21 +12,17 @@ while i < len(lt):
     i += 1
 
 i = 0
+base1 = 3
+base2 = 5
+
 while i < len(lt):
-    if ((lt[i] % 3) == 0) and ((lt[i] % 5) == 0):
+    if (((lt[i] % base1) == 0) or str(lt[i]) in str(base1)) and (((lt[i] % base2) == 0) or str(lt[i]) in str(base2)):
         lt[i] = "fizzbuzz"
-    elif (lt[i] % 3) == 0:
+    elif (lt[i] % base1) == 0:
         lt[i] = "fizz"
-    elif (lt[i] % 5) == 0:
+    elif (lt[i] % base1) == 0:
         lt[i] = "buzz"
-    elif (lt[i] // 10) == 3:
-        lt[i] = "fizz"
-    elif (lt[i] // 10) == 5:
-        lt[i] = "buzz"
-    elif (lt[i] // 10) == 3 and (lt[i] % 5) == 0:
-        lt[i] = "fizzbuzz"
-    elif (lt[i] // 10) == 5 and (lt[i] % 5) == 0:
-        lt[i] = "fizzbuzz"
+      
     else:
         pass
     i += 1
