@@ -7,7 +7,7 @@ def user_input():
 
 
 def menu_input():
-	other_input = input('Choose from menu: ')
+	other_input = input('Choose: ')
 
 
 	try:
@@ -54,7 +54,7 @@ def user_menu():
 	print('* 1 Reverse a word                 *')
 	print('* 2 Create palindrome              *')
 	print('* 3 Search palindrome in a string  *')
-	print('* 4 Exit                           *')
+	print('* 4. Exit                          *')
 	print('*                                  *')
 	print('************************************')
 	print('                                    ')
@@ -77,6 +77,8 @@ def search_palindrome(string_input):
 				i += 1
 			i2 += 1
 	print('')
-	print(colored('\033[47m' + '\033[1m' + str(palindromes), 'red'))
+	print(colored('\033[47m' + '\033[1m' + palindromes, 'red'))
 
 main()
+#output = create_palindrome(user_input())
+#print(output)
