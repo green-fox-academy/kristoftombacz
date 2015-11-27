@@ -5,10 +5,10 @@ trueorfalse = False;
 
 for k in range(base, number):
     if number % k == 0:
-        trueorfalse = False
+    	trueorfalse = False
         break
     elif number % k != 0:
-          trueorfalse = True
+    	trueorfalse = True
 
 if trueorfalse == True:
     print("ez egs prim")
