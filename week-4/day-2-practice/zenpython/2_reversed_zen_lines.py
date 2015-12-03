@@ -1,16 +1,15 @@
-first = open('reversed_zen_lines.txt')
-first_write = open('2_reversed_zen_lines_result.txt', 'w')
-
-first_read = first.readlines()
+temp = open('reversed_zen_lines.txt')
+temp_write = open('2_reversed_zen_lines_result.txt', 'w')
+lines = temp.readlines()
 
 def reversed_zen_lines(text):
-	valami = ''
+	sum = ''
 	for n in text:
-		 valami += n[::-1]
-	return valami
+		 sum += n[::-1]
+	return sum
 
-reversed_zen_lines(first_read)
-first_write.write(reversed_zen_lines(first_read))
+reversed_zen_lines(lines)
+temp_write.write(reversed_zen_lines(lines))
 
-first.close()
-first_write.close()
+temp.close()
+temp_write.close()

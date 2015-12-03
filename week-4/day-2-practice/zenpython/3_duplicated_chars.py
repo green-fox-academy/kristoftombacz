@@ -4,7 +4,7 @@ lines = temp.readlines()
 
 def duplicated_chars(text):
 	for n in text:
-		temp_write.write(n[::2])	
+		return n[::2]:
 
 temp_write.write(dublicated_chars(lines))
 duplicated_chars(lines)
