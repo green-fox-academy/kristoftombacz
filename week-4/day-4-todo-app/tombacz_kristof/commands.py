@@ -1,11 +1,12 @@
 import store
+import datetime
 
 def lists(list):
 	if list != []:
 		i = 1
 		print('')
 		for n in list:
-			print(i, n['description'], n['status'])
+			print(i, n['description'], n['status'], n['due date'])
 			i += 1
 		print('')
 	else:
@@ -13,7 +14,8 @@ def lists(list):
 
 def add(list):
 	user_input = input('\033[47m' + '\nPlease enter a new items to your to-do list: ')
-	list.append({'description': user_input, 'status': 'TO DO'})
+	user_input_date = input('Enter the due date in the format(2015.12.03): ')
+	list.append({'description': user_input, 'status': 'TO DO', 'due date': user_input_date})
 	store.save(list)
 
 def complete(list):
@@ -41,6 +43,6 @@ def remove_completed(list):
 	for n in list:
 		if n['status'] == 'DONE':
 			list.remove(n)
-			
+
 	print('\nAll DONE items deleted!\n')
 	store.save(list)
