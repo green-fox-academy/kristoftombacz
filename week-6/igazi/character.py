@@ -5,10 +5,10 @@ class Character:
 		self.health = health
 		self.dexterity = dexterity
 		self.luck = luck
-		self.inventory = ['Sword', 'Leather Armor']
+		self.inventory = ['Sword', 'Leather Armor', '']
 	
 	def add_inventory(self, item):
-		self.inventory.append(item)
+		self.inventory[2] = item
 	
 	def character_table(self):
 		character = ''
