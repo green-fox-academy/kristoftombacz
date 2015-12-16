@@ -3,7 +3,7 @@ import os
 from character import *
 from commands import *
 
-monster = Monster('Ryuk', 50, 5)
+monster = Monster('Ryuk', 50, 10)
 
 def pre_fight_print(yourself, opponent):
 	print(	
@@ -23,8 +23,12 @@ def begin():
 def strike():
 	while True:
 		player1_dexter = menus.random_cube() + menus.random_cube() + player1.dexterity
-		monster_dexter = menus.random_cube() + menus.random_cube() + monster.desterity
+		monster_dexter = menus.random_cube() + menus.random_cube() + monster.dexterity
 
 		if player1_dexter > monster_dexter:
-			pass
+			print('\nYou hit the monster')
+			break
+		elif player1_dexter < monster_dexter:
+			print('\nThe monster hit you')
+			break
 
