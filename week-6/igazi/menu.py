@@ -1,8 +1,10 @@
-
 class Menu:
 
 	def __init__(self, items):
 		self.items = items
+	
+	def get_menu_name(self):
+		return self.items
 
 	def menu_input(self):
 		while True:
