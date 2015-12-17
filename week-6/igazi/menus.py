@@ -1,9 +1,10 @@
 from commands import *
 from fight import *
+from store import *
 
 first_menu = (
 		{'number':1, 'name': 'New Game', 'function': new_game},
-		{'number':2, 'name': 'Load Game', 'function': None},
+		{'number':2, 'name': 'Load Game', 'function': load_game},
 		{'number':3, 'name': 'Exit', 'function': exit}
 	)
 
@@ -45,11 +46,11 @@ seventh_menu = (
 		{'number': 3, 'name': 'Quit', 'function': quit}
 	)		
 
-#eight_menu = (
-#		{'number': 1, 'name': 'Add new item', 'function': None},
-#		{'number': 2, 'name': 'Resume', 'function': None},
-#		{'number': 3, 'name': 'Quit', 'function': quit}
-#	)		
+eighth_menu = (
+		{'number': 1, 'name': 'Add new item', 'function': add_new_item},
+		{'number': 2, 'name': 'Resume', 'function': resume},
+		{'number': 3, 'name': 'Quit', 'function': quit}
+	)		
 
 begin_menu = (
 		{'number': 1, 'name': 'Strike', 'function': strike},
@@ -62,6 +63,3 @@ strike_submenu = (
 		{'number': 3, 'name': 'Retreat', 'function': None},
 		{'number': 4, 'name': 'Quit', 'function': exit}
 	)
-
-
-

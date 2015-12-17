@@ -11,7 +11,7 @@ player1 = Player('', 0, 0, 0)
 return_menu_name = StoreName()
 
 def username_input():
-	user_input = input('\nPlease write your name: ')
+	user_input = input('\nPlease write a name for your character: ')
 	player1.name = user_input
 	
 	return user_input
@@ -29,6 +29,7 @@ def new_game():
 
 def resume():
 	os.system('clear')
+	
 	new_game_submenu = Menu(return_menu_name.return_name())
 	prev_menu_name = new_game_submenu.get_menu_name()
 	prev_menu = Menu(prev_menu_name)
@@ -38,20 +39,6 @@ def quit():
 	os.system('clear')
 	quit_submenu = Menu(menus.third_menu)
 	quit_submenu.menu_summary()
-
-def save_and_quit():
-	os.system('clear')
-	filename = open('save.json', 'w')
-	json.dump(player1.create_dictionary(), filename)
-	filename.close()
-	exit()
-
-def save():
-	filename = open('save.json', 'w')
-	json.dump(player1.create_dictionary(), filename)
-	filename.close()
-	return_menu = Menu(return_menu_name.return_name())
-	return_menu.menu_summary()
 
 def random_cube():
 	rnd = randint(1,6)
@@ -69,7 +56,8 @@ def roll_stats():
 	player1.luck = random_cube() + 6
 	player1.max_health = player1.health
 	player1.max_luck = player1.luck
-	
+
+def roll_stats_print():
 	print(
 		"\nHealth: " + str(player1.health) + 
 		" | Dexterity: " + str(player1.dexterity) + 
@@ -79,6 +67,7 @@ def roll_stats():
 def contineu():
 	os.system('clear')
 	roll_stats()
+	roll_stats_print()
 	continue_submenu = Menu(menus.fourth_menu)
 	return_menu_name.get_name(menus.fourth_menu)
 	continue_submenu.menu_summary()
@@ -112,3 +101,56 @@ def character():
 	begin_game_menu = Menu(menus.seventh_menu)
 	return_menu_name.get_name(menus.seventh_menu)
 	begin_game_menu.menu_summary()
+
+def list_json():
+	json = []
+	for file in os.listdir():
+		if file.endswith('.json'):
+			json.append(file)
+	return json
+
+def save_and_quit():
+	save()
+	exit()
+
+def save_character():
+	filename = open('save.json', 'w')
+	json.dump(player1.create_dictionary(), filename)
+	filename.close()
+	return_menu = Menu(return_menu_name.return_name())
+	return_menu.menu_summary()
+
+def save():
+	os.system('clear')
+	print('\n')
+	for files in list_json():
+		print(' '*5 + files)
+	save_submenu = Menu(menus.eighth_menu)
+	save_submenu.menu_summary()
+
+def add_new_item():
+	filename_input = input('\nPlease write a filename: ')
+	filename = open(filename_input + '.json', 'w')
+	json.dump(player1.create_dictionary(), filename)
+	filename.close()
+
+	save()
+
+def load_game():
+	os.system('clear')
+	print('\n')
+	i = 1
+	for files in list_json():
+		print(' '*5 + str(i) + ' - ' + files)
+		i += 1
+
+	load_game = Menu(list_json())
+	loaded = load_game.menu_input()
+
+	i = 1
+	for item in list_json():
+		if i == loaded:
+			filename = open(item, 'r')
+			loading = json.load(filename)
+			player1 = loading
+			filename.close()
