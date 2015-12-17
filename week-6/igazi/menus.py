@@ -54,7 +54,14 @@ seventh_menu = (
 begin_menu = (
 		{'number': 1, 'name': 'Strike', 'function': strike},
 		{'number': 2, 'name': 'Retreat', 'function': None},
-		{'number': 3, 'name': 'Quit', 'function': exit}
-	)		
+		{'number': 3, 'name': 'Quit', 'function': quit}
+	)
+strike_submenu = (
+		{'number': 1, 'name': 'Continue', 'function': begin},
+		{'number': 2, 'name': 'Try your luck', 'function': try_your_luck},
+		{'number': 3, 'name': 'Retreat', 'function': None},
+		{'number': 4, 'name': 'Quit', 'function': exit}
+	)
+
 
 

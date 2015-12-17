@@ -57,11 +57,15 @@ def random_cube():
 	rnd = randint(1,6)
 	return rnd
 
+def random_cube_double():
+	rnd = randint(1,6) + randint(1,6)
+	return rnd
+
 def roll_stats():
 	os.system('clear')
 	
 	player1.dexterity = random_cube() + 6
-	player1.health = random_cube() + random_cube() + 12
+	player1.health = random_cube_double() + 12
 	player1.luck = random_cube() + 6
 	player1.max_health = player1.health
 	player1.max_luck = player1.luck
