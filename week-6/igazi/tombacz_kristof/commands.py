@@ -6,8 +6,9 @@ from menu import Menu
 from random import randint
 from character import Player
 from store import StoreName
+from fight import *
 
-player1 = Player('', 0, 0, 0)
+player1 = Player('lala', 0, 0, 0)
 return_menu_name = StoreName()
 
 def username_input():
@@ -82,7 +83,6 @@ def potion():
 	input_number = potion_submenu.menu_input()
 	potion_name = potion_submenu.get_item_name(input_number)
 	player1.add_inventory(potion_name)
-
 	potion_submenu.menu_selector(input_number)
 	
 def potion_selector():
@@ -152,5 +152,24 @@ def load_game():
 		if i == loaded:
 			filename = open(item, 'r')
 			loading = json.load(filename)
-			player1 = loading
+
+			player1.name = loading['name']
+			player1.health = loading['health']
+			player1.max_health = loading['health']
+			player1.dexterity = loading['dexterity']
+			player1.luck = loading['luck']
+			player1.max_luck = loading['luck']
+			player1.inventory = loading['inventory']
 			filename.close()
+		i += 1
+	begin(player1)
+def add_at():
+	valami = player1
+	return valami
+
+def retreat():
+	print('\nYou have to buy the DLC to retreat, sorry :c')
+	print('Only 100$, but because of christmas you can get it for 30$ 30$, THIRTYYYY $$$$$$!\n')
+	input('Press a key to continue...')
+	begin(player1)
+

@@ -17,8 +17,10 @@ class Menu:
 	def menu_print(self):
 		menu = ''
 		menu += ("\n" + "_"*25 + "\n\n")
+		
 		for n in self.items:
 			menu += (" "*5 + str(n['number']) + " - " + n['name'] + "\n")
+		
 		menu += ("_"*25)
 		print(menu)
 

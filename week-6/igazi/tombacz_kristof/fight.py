@@ -1,11 +1,14 @@
 import menus
 import os
 from character import *
-from commands import *
+from store import StoreName
+from menu import Menu
 
 monster = Monster('Ryuk', 5, 10)
+return_menu_name = StoreName()
 player_hit = None
 player_luck = None
+player1 = Player('', 0, 0, 0)
 
 def pre_fight_print(yourself, opponent):
 	print(	
@@ -13,9 +16,10 @@ def pre_fight_print(yourself, opponent):
 		'\nYour Opponent:' + opponent.fight_menu()
 	)
 	
-def begin():
+def begin(character):
 	os.system('clear')
 	global player_luck
+	global player1
 
 	if player_luck is None:
 		pass
@@ -28,10 +32,11 @@ def begin():
 
 	if player_hit is None:
 		print('\nTest your Sword in a test fight!\n')
-
-	pre_fight_print(player1, monster)
-
+	
+	pre_fight_print(character, monster)
+	player1 = character
 	begin_fight = Menu(menus.begin_menu)
+	return_menu_name.get_name(menus.begin_menu)
 	begin_fight.menu_summary()
 
 def strike():
@@ -75,4 +80,4 @@ def try_your_luck():
 			player1.health += 1
 			player1.luck -= 1
 			player_luck = True
-	begin()
+	begin(player1)
