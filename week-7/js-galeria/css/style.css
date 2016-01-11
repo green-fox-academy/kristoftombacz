@@ -1,0 +1,32 @@
+body {
+        background-color: grey
+}
+
+.mid-box, .thumb-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+}
+.thumb-img {
+        padding: 25px;
+        width: 120px;
+        height: 120px;
+}
+
+.thumb-img:hover {
+        width: 135px;
+        height: 135px;
+}
+
+.img-box {
+        margin: auto;
+        min-width: 400px;
+        min-height: 400px;
+}
+
+.arrow-left {
+        margin-top: 136px;
+}
+.arrow-right {
+        margin-top: 136px;
+}
