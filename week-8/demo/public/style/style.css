@@ -1,0 +1,34 @@
+.todo-container {
+        overflow: hidden;
+        width: 500px;
+        margin: 30px auto;
+        background-color: #F0F0F0;
+}
+
+.todo-controller {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        max-width: 360px;
+}
+
+body {
+        background-color: #BBBBBB;
+}
+textarea {
+        white-space: normal;
+        text-align: justify;
+        text-align-last: center;
+        resize: none;
+}
+
+p {
+        font-family: Verdana, sans-serif;
+        margin: 5px;
+        border: solid 10px #BBBBBB;
+        text-align: center;
+}
+img {
+        width: 10px;
+        height: 10px;
+}
