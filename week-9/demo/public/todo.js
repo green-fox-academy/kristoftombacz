@@ -14,8 +14,8 @@ var listCallback = function (response) {
     var newImgItem = document.createElement('img');
 
     newImgItem.setAttribute('src', "img/x.png");
-    newTodoItem.setAttribute('id', todoItem.id);
-    newImgItem.setAttribute('id', todoItem.id);
+    newTodoItem.setAttribute('id', todoItem.todo_id);
+    newImgItem.setAttribute('id', todoItem.todo_id);
 
     newTodoItem.innerHTML = itemText;
     newTodoItem.appendChild(newImgItem);
@@ -32,7 +32,8 @@ var listCallback = function (response) {
       console.log(newTodoItem);
 
       var id = e.target.getAttribute("id");
-      createRequest('DELETE', url +'/' + id, undefined, refresh)
+      createRequest('DELETE', url +'/' + id, undefined, refresh);
+      document.getElementById(id).remove();
     });
   })
 }

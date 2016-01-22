@@ -6,10 +6,6 @@ var items = require("./items.js");
 
 var app = express();
 
-items.add({text: 'Buy milk'});
-items.add({text: 'Make dinner'});
-items.add({text: 'Save the world'});
-
 // Basic middlewares
 app.use(logRequest);
 app.use(express.static("public"));
@@ -17,7 +13,9 @@ app.use(bodyParser.json());
 
 // GET /todos => list all todo items
 app.get("/todos", function (req, res) {
-  res.json(items.all());
+  items.all(function (results){
+    res.json(results);
+  })
 });
 
 // POST /todos => create a new todo item
@@ -49,15 +47,20 @@ app.put("/todos/:id", function (req, res) {
   });
 });
 
+
 // DELETE /todos/1 => remove a todo item
 // It deletes and returns a todo item.
 app.delete("/todos/:id", function (req, res) {
-  findItem(req, res, function (item) {
-    items.remove(item.id);
-    item.destroyed = true;
-    res.json(item);
+  items.remove(req.params.id, function(results){
+    console.log(results);
   });
 });
+
+app.get("/ra", function(req, res){
+  items.deleteAll(function (results){
+    res.status(200).send();
+  });
+})
 
 app.listen(3000, function () {
   console.log("Listening on port 3000...")

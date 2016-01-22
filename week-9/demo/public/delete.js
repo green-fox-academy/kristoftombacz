@@ -12,9 +12,11 @@ delButton.addEventListener('click', function (){
   newStatusItem.innerText = statusLog;
   todoStatus.appendChild(newStatusItem);
 
-var todoArray =  document.querySelectorAll('p');
+  var todoArray =  document.querySelectorAll('p');
   for (var i = 0; todoArray.length; i++){
     deleteUrl = url + '/' + todoArray[i].id;
     createRequest('DELETE', deleteUrl, undefined, refresh);
   }
+  //createRequest('DELETE', 'http://localhost:3000/ra', {}, refresh);
 })
+

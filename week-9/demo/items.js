@@ -10,17 +10,11 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'test',
-  password: 'test',
-  database: 'test'
+  password: 'gyuri',
+  database: 'todo'
 });
 
 connection.connect();
-
-module.exports = {
-  add: addItem,
-//  get: getUser,
-//  getUserById: getUserById
-};
 
 TodoItem.prototype.update = function(attributes) {
   this.text = attributes.text || "";
@@ -28,14 +22,19 @@ TodoItem.prototype.update = function(attributes) {
 };
 
 var currId = 0;
+
 function nextId() {
   return ++currId;
 }
 
 var items = {};
 
-function getItem(id) {
-  return items[id];
+function getItem(id, callback) {
+  connection.query('SELECT text,status FROM todo WHERE todo_id=?', id, function(err, result) {
+    if (err) {throw err;}
+    console.log(result);
+    callback(result);
+  });
 }
 
 function addItem(attributes) {
@@ -45,16 +44,27 @@ function addItem(attributes) {
   })
 }
 
-function removeItem(id) {
-  delete items[id];
+function removeItem(id, callback) {
+  connection.query('DELETE FROM todo WHERE todo_id= ?', id, function(err, result){
+    if (err) throw err;
+    console.log(result.insertId);
+    callback(result);
+  });
 }
 
-function allItems() {
-  var values = [];
-  for (id in items) {
-    values.push(items[id]);
-  }
-  return values;
+function allItems(callback) {
+  connection.query('SELECT todo_id,text,status FROM todo;', function(err, result){
+    if (err) throw err;
+    console.log(result);
+    callback(result);
+  });
+}
+
+function deleteAllItems(callback) {
+  connection.query('DELETE * FROM todo;', function(err, result) {
+  if (err) throw err;
+  callback(results);
+  });
 }
 
 module.exports = {
@@ -62,4 +72,5 @@ module.exports = {
   add: addItem,
   remove: removeItem,
   all: allItems,
+  deleteAll: deleteAllItems
 };

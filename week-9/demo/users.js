@@ -4,14 +4,14 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'test',
-  password : 'test',
+  password : 'gyuri',
   database : 'todo'
 });
 
 connection.connect();
 
 function addUser(attributes) {
-  connection.query('INSERT INTO user SET ?', attributes, function(err, result) {
+  connection.query('INSERT INTO todo SET ?', attributes, function(err, result) {
     if (err) throw err;
     console.log(result.insertId);
   });

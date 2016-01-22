@@ -1,11 +1,12 @@
 {
   "name": "demo",
   "version": "1.0.0",
-  "description": "",
   "main": "items.js",
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
+    "kerberos": "0.0.18",
+    "mongodb": "^2.1.4",
     "mysql": "^2.10.2"
   },
   "devDependencies": {},
@@ -14,5 +15,6 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
